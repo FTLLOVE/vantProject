@@ -7,15 +7,22 @@ export default new Router({
   routes: [
     {
       path: '/',
-      redirect: '/HelloWorld'
-    }, {
-      path: '/HelloWorld',
-      component: resolve => require(['../components/HelloWorld.vue'], resolve),
-      meta: '测试一'
-    }, {
-      path: '/test',
-      component: resolve => require(['../components/test.vue'], resolve),
-      meta: '测试二'
+      redirect: '/goods'
+    },
+    {
+      path: '/cart',
+      component: resolve => require(['../components/cart/index.vue'], resolve),
+      meta: '购物车'
+    },
+    {
+      path: '/goods',
+      component: resolve => require(['../components/goods/index.vue'], resolve),
+      meta: '商品详情'
+    },
+    {
+      path: '/user',
+      component: resolve => require(['../components/user/index.vue'], resolve),
+      meta: '用户模块'
     }
 
   ]
